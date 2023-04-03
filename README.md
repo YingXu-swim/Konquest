@@ -1,13 +1,6 @@
-CS-E4800 Tournament
-###################
 
-Welcome to the "CS-E4800 Tournament"!
+### What is Konquest
 
-In this tournament, we will develop an agent to play the Konquest game.
-
-
-Konquest
-^^^^^^^^
 This game is based on the Konquest game in KDE/Ubuntu. The game starts with some
 planets scattered in space and two players. Each planet can produce some ships.
 Using ships, players can attack other planets to conquer them. The goal is to
@@ -58,8 +51,7 @@ play the original version from here:
     * https://apps.kde.org/konquest/
 
 
-Requirements
-^^^^^^^^^^^^
+### Requirements
 To run this program, we need to install `Pillow==9.4.0` and `numpy==1.24.2`.
 You can install these dependencies by using the following command:
 `pip3 install -r requirements.txt`
@@ -69,47 +61,18 @@ NOTE: We use `python3.9` for the tournament (more precisely, we disable the
       performance).
 
 
-Instructions
-^^^^^^^^^^^^
-0. (Optional) Watch the game to learn and understand its rules.
-   You can watch the game by running the following command:
+### Instructions
+You can watch the game by running the following command:
    `python3 main.py`
    You can compare the performance of different agents, by choosing them as the
    players. To specify the type of players, you can modify the `players`
    variable in the `main.py`.
+![image](https://github.com/rrrimp/Konquest/blob/main/images/gamepage.png)
+This demo includes the following agents:
+* the `RandomAgent` in `random_agent.py`,
+* the `MarkovAgent` in `markov_agent.py`,
+* the `MinimaxAgent` in `minimax_agent.py`,
+* the `IterativeDeepening` in `iterative_deepening.py`, and,
+* the `IDMinimaxAgent` in `id_minimax_agent.py`.
+* the `IDMinimaxEditAgent` in `id_minimax_edit_agent.py` with modified heuristics function.
 
-1. Copy `agent-template.py` to `agent.py`.
-
-2. Read and understand the `agent.py`.
-
-3. Take a brief look at the following agents:
-3.1. the `RandomAgent` in `random_agent.py`,
-3.2. the `MarkovAgent` in `markov_agent.py`,
-3.3. the `MinimaxAgent` in `minimax_agent.py`,
-3.4. the `IterativeDeepening` in `iterative_deepening.py`, and,
-3.5. the `IDMinimaxAgent` in `id_minimax_agent.py`.
-
-4. Complete the `info` method of the `Agent` class
-
-5. Complete the `decide` method of the `Agent` class by developing an algorithm
-   to overcome all opponents. You are free to choose any kind of game-playing 
-   agent to implement. Some obvious approaches are the following:
-5.1 Implement alpha-beta (and investigate its potential for searching deeper
-    than what is possible with Minimax). Also, the order in which the actions
-    are tried in a given node impacts the effectiveness of alpha-beta: you could
-    investigate different ways of ordering the actions/successor states.
-5.2 Try out better heuristics.
-5.3 You could try out more advanced Monte Carlo search methods; however, we do
-    not know whether MCTS is competitive because of the high cost of the full
-    gameplay.
-5.4 You could, of course, try something completely different if you are willing to
-    invest more time.
-
-
-Simulation
-^^^^^^^^^^
-For simulating the game, you can use the `main.py` script. Just import your agent
-and `play` the game with an instance of your agent.
-
-
-GL HF :)
