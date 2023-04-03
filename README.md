@@ -50,17 +50,6 @@ This game is a modified version of the Konquest game in KDE/Ubuntu. You can
 play the original version from here:
     * https://apps.kde.org/konquest/
 
-
-### Requirements
-To run this program, we need to install `Pillow==9.4.0` and `numpy==1.24.2`.
-You can install these dependencies by using the following command:
-`pip3 install -r requirements.txt`
-
-NOTE: We use `python3.9` for the tournament (more precisely, we disable the
-      visualization and use `pypy` compatible with `python3.9` to improve the
-      performance).
-
-
 ### Instructions
 You can watch the game by running the following command:
    `python3 main.py`
@@ -75,4 +64,15 @@ This demo includes the following agents:
 * the `IterativeDeepening` in `iterative_deepening.py`, and,
 * the `IDMinimaxAgent` in `id_minimax_agent.py`.
 * the `IDMinimaxEditAgent` in `id_minimax_edit_agent.py` with modified heuristics function.
+
+
+### Requirements
+To run this program, we need to install `Pillow==9.4.0` and `numpy==1.24.2`.
+You can install these dependencies by using the following command:
+`pip3 install -r requirements.txt`
+
+NOTE: We use `python3.9` for the tournament (more precisely, we disable the
+      visualization and use `pypy` compatible with `python3.9` to improve the
+      performance).
+
 
